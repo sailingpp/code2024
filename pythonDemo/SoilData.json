@@ -1,0 +1,56 @@
+{
+    "kc1": [{
+            "layerId": 1,
+            "layerName": "粘土",
+            "startHeight": 19,
+            "endHeight": 18,
+            "qsi": 20,
+            "qua": 20
+
+        },
+        {
+            "layerId": 2,
+            "layerName": "粘土",
+            "startHeight": 18,
+            "endHeight": 17,
+            "qsi": 30,
+            "qua": 20
+        },
+        {
+            "layerId": 3,
+            "layerName": "粘土",
+            "startHeight": 17,
+            "endHeight": 16,
+            "qsi": 40,
+            "qua": 20
+        }
+    ],
+    "kc2": [{
+            "layerId": 1,
+            "layerName": "粘土",
+            "startHeight": 19,
+            "endHeight": 18,
+            "qsi": 20,
+            "qua": 20
+        },
+        {
+            "layerId": 2,
+            "layerName": "粘土",
+            "startHeight": 18,
+            "endHeight": 13,
+            "qsi": 20,
+            "qua": 20
+        },
+        {
+            "layerId": 3,
+            "layerName": "粘土",
+            "startHeight": 13,
+            "endHeight": 12,
+            "qsi": 20,
+            "qua": 20
+        }
+    ]
+
+
+
+}

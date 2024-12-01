@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table id="table" border="1px"> soil
+        <tr id="diameter">
+            <th> 桩直径 </th>
+            <th> 0.8</th>
+            <th> m </th>
+        </tr>
+        <tr id="pile">
+            <th> 周长 </th>
+        </tr>
+        <tr id="area">
+            <th> 面积 </th>
+        </tr>
+        <tr>
+            <th> 孔号 </th>
+            <th colspan="4"> KC1 </th>
+        </tr>
+        <tr>
+            <th> 土层 </th>
+            <th> 土层厚度</th>
+            <th> qsi </th>
+            <th> 侧阻力 </th>
+        </tr>
+        <tr id="soil">
+            <th> 第一层粘土 </th>
+            <th> </th>
+        </tr>
+    </table>
+
+    <script>
+        class pile {
+            constructor(diameter) {
+                this.diameter = diameter
+                this.cir = (diameter * 3.14).toFixed(3)
+                this.area = diameter * diameter / 4 * 3.14
+            }
+            soildata = [{
+                "layername": "粘土",
+                "len": 1.2,
+                "qsi": 10
+            }, {
+                "layername": "粘土",
+                "len": 1.5,
+                "qsi": 20
+            }, {
+                "layername": "粘土",
+                "len": 1.2,
+                "qsi": 10
+            }]
+            Fqsi(qsi, len) {
+                return this.cir * len * qsi
+            }
+        }
+        mypile = new pile(0.8)
+        let stable = document.getElementById('table')
+        let t = document.createElement("tr")
+        let th = document.createElement("th")
+        t.appendChild(th)
+        th.textContent = mypile.diameter
+        stable.appendChild(t)
+        let pilecir = document.getElementById("pile").childNodes[2]
+        pilecir.textContent = mypile.cir
+
+        let pilearea = document.getElementById("area").childNodes[2]
+        pilearea.textContent = mypile.area
+
+        let soillen = document.getElementById("soil").childNodes[2]
+        soillen.textContent = mypile.soildata[0].len
+
+        let soilqsi = document.getElementById("soil").childNodes[3]
+        soilqsi.textContent = mypile.soildata[0].qsi
+
+        let soilFqsi = document.getElementById("soil").childNodes[4]
+        soilFqsi.textContent = mypile.Fqsi(mypile.soildata[0].qsi, mypile.soildata[0].len)
+    </script>
+</body>
+
+</html>
