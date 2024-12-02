@@ -11,8 +11,6 @@ pd.set_option('display.expand_frame_repr',False)
 dic={}
 df=pd.read_json('./pythonDemo/SoilData.json')
 for i in df.keys():
-#    print(i)
-#     print(df[i].values)
      dic[i]=df[i].values
 
 print(dic)
